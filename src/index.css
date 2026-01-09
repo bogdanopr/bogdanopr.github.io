@@ -24,3 +24,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}

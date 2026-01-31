@@ -305,6 +305,41 @@ h1::after {
   /* Align with banner */
 }
 
+@media (max-width: 600px) {
+  .relic-warning-container {
+    width: 90vw;
+    max-width: 400px;
+  }
+
+  .warning-content-top {
+    gap: 10px;
+  }
+
+  .warning-icon-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+
+  .warning-icon-wrapper svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .warning-banner {
+    padding: 6px 20px 6px 15px;
+  }
+
+  .warning-title {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    letter-spacing: 1px;
+  }
+
+  .warning-metadata {
+    font-size: 0.55rem;
+    padding-left: 15px;
+  }
+}
+
 /* No pulsation needed for the warning itself as it's hidden during that phase */
 
 section {

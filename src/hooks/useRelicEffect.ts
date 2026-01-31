@@ -2,53 +2,67 @@ import { useState, useEffect, useCallback } from 'react';
 
 export const useRelicEffect = () => {
     const [isMalfunctioning, setIsMalfunctioning] = useState(false);
-    const [baseFrequency, setBaseFrequency] = useState('0.00001');
-    const [scale, setScale] = useState(0);
+    const [glitchFrequency, setGlitchFrequency] = useState('0.00001');
+    const [glitchScale, setGlitchScale] = useState(0);
 
-    const triggerMalfunction = useCallback(() => {
+    const triggerSystemMalfunction = useCallback(() => {
         if (isMalfunctioning) return;
         setIsMalfunctioning(true);
 
-        let frames = 0;
-        const interval = setInterval(() => {
-            setBaseFrequency(`${Math.random() * 0.1} ${Math.random() * 0.1}`);
-            setScale(Math.random() * 100);
+        let animationFrameCount = 0;
+        // Keep original setInterval for 1:1 visual parity as per requirements
+        const isMobile = window.innerWidth <= 768;
+        const malfunctionInterval = setInterval(() => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            frames++;
-            if (frames > 40) {
-                clearInterval(interval);
+            if (prefersReducedMotion) {
+                clearInterval(malfunctionInterval);
                 setIsMalfunctioning(false);
-                setBaseFrequency('0.00001');
-                setScale(0);
+                return;
             }
-        }, 50);
+
+            setGlitchFrequency(`${Math.random() * 0.1} ${Math.random() * 0.1}`);
+            setGlitchScale(Math.random() * (isMobile ? 30 : 100));
+
+            animationFrameCount++;
+            if (animationFrameCount > (isMobile ? 20 : 40)) {
+                clearInterval(malfunctionInterval);
+                setIsMalfunctioning(false);
+                setGlitchFrequency('0.00001');
+                setGlitchScale(0);
+            }
+        }, isMobile ? 100 : 50);
     }, [isMalfunctioning]);
 
-    const stopMalfunction = useCallback(() => {
+    const stopSystemMalfunction = useCallback(() => {
         if (isMalfunctioning) {
             setIsMalfunctioning(false);
-            setBaseFrequency('0.00001');
-            setScale(0);
+            setGlitchFrequency('0.00001');
+            setGlitchScale(0);
         }
     }, [isMalfunctioning]);
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        const autoTriggerInterval = setInterval(() => {
             if (!isMalfunctioning && Math.random() > 0.8) {
-                triggerMalfunction();
+                triggerSystemMalfunction();
             }
         }, 5000);
 
-        const handleMouseDown = () => {
-            stopMalfunction();
+        const handleGlobalClick = () => {
+            stopSystemMalfunction();
         };
 
-        window.addEventListener('mousedown', handleMouseDown);
+        window.addEventListener('mousedown', handleGlobalClick);
         return () => {
-            clearInterval(interval);
-            window.removeEventListener('mousedown', handleMouseDown);
+            clearInterval(autoTriggerInterval);
+            window.removeEventListener('mousedown', handleGlobalClick);
         };
-    }, [isMalfunctioning, triggerMalfunction, stopMalfunction]);
+    }, [isMalfunctioning, triggerSystemMalfunction, stopSystemMalfunction]);
 
-    return { isMalfunctioning, baseFrequency, scale };
+    return {
+        isMalfunctioning,
+        baseFrequency: glitchFrequency,
+        scale: glitchScale
+    };
 };

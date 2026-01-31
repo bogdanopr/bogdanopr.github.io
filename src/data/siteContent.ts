@@ -11,22 +11,23 @@ export interface SpecItem {
 
 export interface StatusItem {
     label: string;
-    value: string; // percentage string e.g., '78%'
+    value: string;
     color?: string;
 }
 
-export const SITE_CONTENT = {
+export const siteContent = {
     header: {
         tag: "NEURAL_ID_X20.77_CODENAME_V",
         title: "B0GDAN OPREA",
-        subtitle: "AI ENGINEER / SOFTWARE ENGINEER / NIGHT CITY LEGEND",
+        subtitle: "AI ENGINEER & ENTHUSIAST / SOFTWARE ENGINEER / NIGHT CITY LEGEND",
         glitchText: "B0GDAN OPREA",
+        accessAlert: "//ACCESS_GRANTED",
     },
     biometrics: {
         tag: "TECH_CORE",
         items: [
-            { label: 'CORE_FRONTEND', value: 'TYPESCRIPT / REACT / NEXT.JS / ANGULAR' },
-            { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRING BOOT' },
+            { label: 'CORE_FRONTEND', value: 'TYPESCRIPT / REACT / NEXT.JS' },
+            { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRINGBOOT' },
             { label: 'DB_LAYER', value: 'POSTGRESQL / NOSQL' },
             { label: 'EXPERIENCED_IN', value: 'IAM / APIs / MICROSERVICES' }
         ] as SpecItem[],
@@ -34,7 +35,6 @@ export const SITE_CONTENT = {
     experience: {
         tag: "EXPERIENCE_LOGS",
         entries: [
-
             {
                 date: "February 2025 - PRESENT",
                 title: "DEVELOPER S. ENGINEER // OKTA Auth0",
@@ -61,26 +61,44 @@ export const SITE_CONTENT = {
                     "used Swagger , Postman for ENDPOINT testing ."
                 ]
             }
-
         ] as LogEntry[],
     },
     skills: {
         tag: "TECHNICAL_LOADOUT",
         items: [
             'TYPESCRIPT', 'REACT', 'ANGULAR', 'NEXT.JS', 'NODEJS',
-            'DATADOG', 'JAVA', 'SPRINGBOOT', 'HIBERNATE', 'MAVEN/GRADLE',
-            'POSTGRESQL'
+            'DATADOG', 'JAVA', 'SPRINGBOOT', 'HIBERNATE', 'MAVEN/GRADLE', 'LIQUIBASE',
+            'POSTGRESQL', 'GIT', 'JENKINS', 'JIRA', 'CONFLUENCE', 'SWAGGER', 'POSTMAN', 'AUTH0', 'OKTA', 'AWS'
         ],
     },
     sidebar: {
+        tags: {
+            systemStatus: "SYSTEM_STATUS",
+            dataFeed: "RAW_DATA_FEED",
+            uplinks: "EXTERNAL_UPLINKS",
+        },
         status: [
             { label: 'CPU_LOAD', value: '78%' },
             { label: 'BIOCHIP_INTEGRITY', value: '42%', color: 'var(--pink)' },
             { label: 'NEURAL_SYNC', value: '95%' }
         ] as StatusItem[],
         errorMsg: "CRITICAL_ERROR: Unauthorized access to Relic sub-routine. Bio-signature mismatch.",
-        linkedIn: "https://www.linkedin.com/in/bogdancojocaruoprea/",
-        email: "mailto:bogdancojocaruoprea@icloud.com",
+        links: {
+            linkedIn: "https://www.linkedin.com/in/bogdancojocaruoprea/",
+            linkedInLabel: "LETS_CONNECT",
+            gitHub: "https://github.com/bogdanopr",
+            gitHubLabel: "LETS_GIT_IT",
+            email: "mailto:bogdancojocaruoprea@icloud.com",
+            emailLabel: "EMAIL_SYNC",
+        },
+    },
+    malfunction: {
+        title: "RELIC MALFUNCTION DETECTED",
+        metadata: {
+            imageName: "IMAGE NAME: IKUX-3.10.10",
+            imageType: "IMAGE TYPE: ARM LINUX KERNEL IMAGE",
+            loadAddress: "LOAD ADDRESS: 0C008100",
+        },
     },
     dataCommands: [
         "INIT_BOOT_SEQUENCE...",
@@ -94,5 +112,14 @@ export const SITE_CONTENT = {
         "UPLINK_STABLE...",
         "DOWNLOADING_RESUME.PDF",
         "SYNCING_NEURAL_NETWORK..."
-    ]
-};
+    ],
+    labels: {
+        linkedInAria: "on LinkedIn",
+        gitHubAria: "on GitHub",
+        emailAria: "via Email",
+        liveDataFeed: "Live data feed",
+        streamPrefix: "> ",
+    }
+} as const;
+
+export type SiteContent = typeof siteContent;

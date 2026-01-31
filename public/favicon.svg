@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#0a0a0b" rx="4"/>
+  <!-- Outer Frame -->
+  <path d="M8 8h16v16H8z" fill="none" stroke="#fcee0a" stroke-width="1.5"/>
+  <!-- Inner Core -->
+  <path d="M12 12h8v8h-8z" fill="#00f0ff" fill-opacity="0.3"/>
+  <!-- Circuit Traces -->
+  <path d="M4 16h6M22 16h6M16 4v6M16 22v6" stroke="#ff003c" stroke-width="2" stroke-linecap="square"/>
+  <!-- Center Node -->
+  <rect x="15" y="15" width="2" height="2" fill="#fcee0a">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+  </rect>
+  <!-- Decorative Glitch Bits -->
+  <rect x="22" y="6" width="4" height="1" fill="#00f0ff" />
+  <rect x="6" y="25" width="4" height="1" fill="#ff003c" />
+</svg>

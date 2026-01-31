@@ -307,36 +307,50 @@ h1::after {
 
 @media (max-width: 600px) {
   .relic-warning-container {
-    width: 90vw;
-    max-width: 400px;
+    width: 95vw;
+    max-width: 340px;
+    padding: 0 10px;
   }
 
   .warning-content-top {
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
   }
 
   .warning-icon-wrapper {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   .warning-icon-wrapper svg {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 
   .warning-banner {
-    padding: 6px 20px 6px 15px;
+    padding: 10px 15px;
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+    width: 100%;
+    text-align: center;
   }
 
   .warning-title {
-    font-size: clamp(1rem, 5vw, 1.3rem);
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
     letter-spacing: 1px;
+    white-space: normal;
+    word-break: break-word;
+    display: block;
+    line-height: 1.2;
   }
 
   .warning-metadata {
-    font-size: 0.55rem;
-    padding-left: 15px;
+    font-size: 0.6rem;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
   }
 }
 

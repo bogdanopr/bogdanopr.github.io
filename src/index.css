@@ -128,35 +128,15 @@ h1::after {
   filter: drop-shadow(0 0 30px rgba(255, 0, 60, 0.4));
 }
 
-.biochip-integrity {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid var(--blue);
-  padding: 10px 20px;
+.access-granted-alert {
   color: var(--blue);
   font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
-  animation: pulse-border 2s infinite ease-in-out;
-}
-
-@keyframes pulse-border {
-  0% {
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 0 5px rgba(0, 240, 255, 0.1);
-  }
-
-  50% {
-    border-color: rgba(0, 240, 255, 1);
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-  }
-
-  100% {
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 0 5px rgba(0, 240, 255, 0.1);
-  }
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--blue);
+  margin-bottom: 5px;
+  /* Align with bottom of h1 base */
 }
 
 .warning-bg-torn {
@@ -593,16 +573,31 @@ footer {
 }
 
 @keyframes pulse-red {
-  from { opacity: 0.4; filter: drop-shadow(0 0 1px var(--pink)); }
-  to { opacity: 1; filter: drop-shadow(0 0 12px var(--pink)); }
+  from {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 1px var(--pink));
+  }
+
+  to {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px var(--pink));
+  }
 }
 
 @keyframes static-blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes graph-flicker {
-  from { opacity: 0.6; transform: scaleX(0.8) scaleY(0.9); }
-  to { opacity: 1; transform: scaleX(1.2) scaleY(1.1); }
-}
+  from {
+    opacity: 0.6;
+    transform: scaleX(0.8) scaleY(0.9);
+  }
 
+  to {
+    opacity: 1;
+    transform: scaleX(1.2) scaleY(1.1);
+  }
+}

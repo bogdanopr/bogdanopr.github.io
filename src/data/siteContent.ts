@@ -52,13 +52,13 @@ export const siteContent = {
                 title: "SOFTWARE ENGINEER // RAIFFEISEN BANK",
                 description: [
                     "Fullstack Development with Java Springboot / Angular / SQL using Agile Methodologies:",
-                    "develop Microservices for online Banking Applications with Spring Boot .",
-                    "develop UIs for online Banking Applications with Angular .",
-                    "used GIT technologies for version control ( GitHub Enterprise ) .",
-                    "used POSTGRESQL databases and Liquibase for DB management .",
-                    "used Jenkins for automation .",
-                    "used Jira , Confluence for documentation and task overview .",
-                    "used Swagger , Postman for ENDPOINT testing ."
+                    "develop Microservices for online Banking Applications with Spring Boot.",
+                    "develop UIs for online Banking Applications with Angular.",
+                    "used GIT technologies for version control ( GitHub Enterprise ).",
+                    "used POSTGRESQL databases and Liquibase for DB management.",
+                    "used Jenkins for automation.",
+                    "used Jira , Confluence for documentation and task overview.",
+                    "used Swagger , Postman for ENDPOINT testing."
                 ]
             }
         ] as LogEntry[],

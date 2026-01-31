@@ -29,7 +29,7 @@ export const siteContent = {
             { label: 'CORE_FRONTEND', value: 'TYPESCRIPT / REACT / NEXT.JS' },
             { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRINGBOOT' },
             { label: 'DB_LAYER', value: 'POSTGRESQL / NOSQL' },
-            { label: 'EXPERIENCED_IN', value: 'IAM / APIs / MICROSERVICES' }
+            { label: 'EXPERIENCED_IN', value: 'UI/UX / APIs / MICROSERVICES / IAM' }
         ] as SpecItem[],
     },
     experience: {

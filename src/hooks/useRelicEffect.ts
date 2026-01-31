@@ -10,7 +10,6 @@ export const useRelicEffect = () => {
         setIsMalfunctioning(true);
 
         let animationFrameCount = 0;
-        // Keep original setInterval for 1:1 visual parity as per requirements
         const isMobile = window.innerWidth <= 768;
         const malfunctionInterval = setInterval(() => {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

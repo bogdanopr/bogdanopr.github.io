@@ -27,7 +27,7 @@ export const siteContent = {
         tag: "TECH_CORE",
         items: [
             { label: 'CORE_FRONTEND', value: 'TYPESCRIPT / REACT / NEXT.JS' },
-            { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRINGBOOT' },
+            { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRINGBOOT / PYTHON' },
             { label: 'DB_LAYER', value: 'POSTGRESQL / NOSQL' },
             { label: 'EXPERIENCED_IN', value: 'UI/UX / APIs / MICROSERVICES / IAM' }
         ] as SpecItem[],
@@ -37,7 +37,7 @@ export const siteContent = {
         entries: [
             {
                 date: "February 2025 - PRESENT",
-                title: "DEVELOPER S. ENGINEER // OKTA Auth0",
+                title: "SOFTWARE S. ENGINEER // OKTA Auth0",
                 description: [
                     "Helping fellow developers integrate the Auth0 product into their apps.",
                     "Configured and debugged Auth0's React SDK ensuring smooth integrations.",

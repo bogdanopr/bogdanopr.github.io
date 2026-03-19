@@ -74,7 +74,7 @@ function App() {
         <header>
           <div className="glitch-wrapper">
             <div className="section-tag">{siteContent.header.tag}</div>
-            <h1 data-text={siteContent.header.glitchText}>{siteContent.header.title}</h1>
+            <h1 data-text={siteContent.header.title}>{siteContent.header.title}</h1>
             <p className="header-subtitle">{siteContent.header.subtitle}</p>
           </div>
 
@@ -120,6 +120,7 @@ function App() {
             ))}
           </section>
 
+{/* 
           <section id="skills" aria-labelledby="skills-tag">
             <div id="skills-tag" className="section-tag">{siteContent.skills.tag}</div>
             <div className="tech-list">
@@ -128,6 +129,7 @@ function App() {
               ))}
             </div>
           </section>
+          */}
         </div>
 
         <div className="sidebar-column">

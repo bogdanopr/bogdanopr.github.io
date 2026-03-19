@@ -17,27 +17,34 @@ export interface StatusItem {
 
 export const siteContent = {
     header: {
-        tag: "NEURAL_ID_X20.77_CODENAME_V",
+        tag: "NEURAL_ID_X20.77_CODENAME_V_GEOLOCATION_BUCHAREST.RO",
         title: "B0GDAN OPREA",
-        subtitle: "AI ENGINEER & ENTHUSIAST / SOFTWARE ENGINEER / NIGHT CITY LEGEND",
-        glitchText: "B0GDAN OPREA",
+        subtitle: "SOFTWARE ENGINEER / ROBOTICS & AUTOMATION / AI ENTHUSIAST",
         accessAlert: "//ACCESS_GRANTED",
     },
     biometrics: {
         tag: "TECH_CORE",
         items: [
             { label: 'CORE_FRONTEND', value: 'TYPESCRIPT / REACT / NEXT.JS' },
-            { label: 'CORE_BACKEND', value: 'NODE.JS / JAVA SPRINGBOOT / PYTHON' },
-            { label: 'DB_LAYER', value: 'POSTGRESQL / NOSQL' },
-            { label: 'EXPERIENCED_IN', value: 'UI/UX / APIs / MICROSERVICES / IAM' }
+            { label: 'CORE_BACKEND', value: 'JAVA SPRINGBOOT / NODE.JS / PYTHON' },
+            { label: 'DB_LAYER', value: 'HIBERNATE / POSTGRESQL / NOSQL' },
+            { label: 'EXPERIENCED_IN', value: 'UI/UX / APIs / KiSoft / IAM' }
         ] as SpecItem[],
     },
     experience: {
         tag: "EXPERIENCE_LOGS",
         entries: [
             {
-                date: "February 2025 - PRESENT",
-                title: "SOFTWARE S. ENGINEER // OKTA Auth0",
+                date: "March 2026 - PRESENT",
+                title: "SOFTWARE C. ENGINEER // KNAPP",
+                description: [
+                    "Robotics & Automation Software Engineering & Commissioning with Java.",
+                    "more to come..."
+                ]
+            },
+            {
+                date: "February 2025 - March 2026",
+                title: "SOFTWARE S. ENGINEER // OKTA",
                 description: [
                     "Helping fellow developers integrate the Auth0 product into their apps.",
                     "Configured and debugged Auth0's React SDK ensuring smooth integrations.",
@@ -48,7 +55,7 @@ export const siteContent = {
                 ]
             },
             {
-                date: "April 2023 - February 2025",
+                date: "March 2023 - February 2025",
                 title: "SOFTWARE ENGINEER // RAIFFEISEN BANK",
                 description: [
                     "Fullstack Development with Java Springboot / Angular / SQL using Agile Methodologies:",
@@ -63,6 +70,7 @@ export const siteContent = {
             }
         ] as LogEntry[],
     },
+    /*
     skills: {
         tag: "TECHNICAL_LOADOUT",
         items: [
@@ -71,6 +79,7 @@ export const siteContent = {
             'POSTGRESQL', 'GIT', 'JENKINS', 'JIRA', 'CONFLUENCE', 'SWAGGER', 'POSTMAN', 'AUTH0', 'OKTA', 'AWS'
         ],
     },
+    */
     sidebar: {
         tags: {
             systemStatus: "SYSTEM_STATUS",

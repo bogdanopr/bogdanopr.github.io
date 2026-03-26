@@ -363,6 +363,9 @@ section {
   font-size: 0.8rem;
   font-weight: 900;
   margin-bottom: 20px;
+  max-width: 100%;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .bio-grid {

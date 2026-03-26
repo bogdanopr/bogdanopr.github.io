@@ -12,8 +12,8 @@
 
   /* FLUID TOKENS */
   --space-unit: clamp(1rem, 2vw, 2.5rem);
-  --font-h1: clamp(2.5rem, 8vw, 5rem);
-  --font-h2: clamp(1.5rem, 4vw, 2.2rem);
+  --font-h1: clamp(1.8rem, 8vw, 5rem);
+  --font-h2: clamp(1.3rem, 4vw, 2.2rem);
   --container-width: 1400px;
   --safe-area-inset: 20px;
 }
@@ -70,7 +70,7 @@ main {
   max-width: var(--container-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-unit);
   z-index: 10;
   grid-template-areas:
@@ -185,7 +185,8 @@ h1 {
   line-height: 0.9;
   letter-spacing: -2px;
   position: relative;
-  word-break: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .header-subtitle {
@@ -398,6 +399,8 @@ section {
 .spec-box p {
   font-size: 1.2rem;
   color: #eee;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-list {

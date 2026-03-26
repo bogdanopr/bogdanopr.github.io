@@ -69,7 +69,7 @@ function App() {
 
       <main
         className={isMalfunctioning ? 'glitching' : ''}
-        style={{ filter: 'url(#relic-glitch-filter)' }}
+        style={isMalfunctioning ? { filter: 'url(#relic-glitch-filter)' } : {}}
       >
         <header>
           <div className="glitch-wrapper">
